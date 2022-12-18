@@ -8,7 +8,7 @@ const wss = new WebSocket({ port: port }, console.log(Server, "Matchmaker starte
 
 wss.on('connection', async (ws) => {
     if (ws.protocol.toLowerCase().includes("xmpp")) {
-        return ws.close();
+        return;
     }
 
     // create hashes
