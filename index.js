@@ -3,7 +3,7 @@ const Server = '[SERVER]';
 const crypto = require("crypto");
 
 // Start listening websocket on port
-const port = 7777;
+const port = 80; // info for you: You cant listen on other ports than 80 (or 443 if you have a SSL cert)
 const wss = new WebSocket({ port: port }, console.log(Server, "Matchmaker started listening on port", port));
 
 wss.on('connection', async (ws) => {
